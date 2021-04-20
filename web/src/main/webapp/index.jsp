@@ -14,7 +14,7 @@
   
   <p>
     This is a very simple example web page on a JSP.
-    <h2><center>vivektrivedi</center></h2>
+    vivektrivedi
   </p>
 </body>
 </html>
