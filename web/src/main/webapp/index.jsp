@@ -27,7 +27,7 @@ h3 {
 
 <h1>Heading 1 (center)</h1>
 <h2>Heading 2 (left)</h2>
-<h3>Heading 3 (right)</h3>
+<h2>Heading 3 (right)</h2>
 
 <p>The three headings above are aligned center, left and right.</p>
 
