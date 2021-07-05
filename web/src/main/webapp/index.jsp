@@ -13,8 +13,7 @@
 <body>
   
   <p>
-    This is a very simple example web page on a JSP.
-    vivektrivedi
-  </p>
+    System Level Solutions India Pvt. Ltd.
+   </p>
 </body>
 </html>
