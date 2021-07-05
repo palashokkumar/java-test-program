@@ -20,7 +20,7 @@ h1 {
 
 <h1>Heading 1 (center)</h1>
 
-<p>The heading above is aligned center.</p>
+<!-- <p>The heading above is aligned center.</p> -->
 
 </body>
 </html>
