@@ -12,8 +12,6 @@
 </head>
 <body>
   
-  <p>
-    System Level Solutions India Pvt. Ltd.
-   </p>
+  <h1><centre>System Level Solutions India Pvt. Ltd.</centre></h1>
 </body>
 </html>
