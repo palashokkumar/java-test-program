@@ -18,7 +18,7 @@ h1 {
 </head>
 <body>
 
-<h1>Heading 1 (right)</h1>
+<h1>Heading 1 (left)</h1>
 
 <p>The heading above is aligned center.</p>
 
