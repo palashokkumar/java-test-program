@@ -18,7 +18,7 @@ h1 {
 </head>
 <body>
 
-<h1>Heading 1 (updated)</h1>
+<h1>Heading 1 (Github-Update)</h1>
 
 <p>The heading above is aligned center.</p>
 
