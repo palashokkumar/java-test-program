@@ -2,6 +2,9 @@ pipeline{
     agent{
         label 'master'
     }
+//     triggers{
+//         pollSCM '* * * * *'
+//     }
     options{
         timestamps ()
         disableConcurrentBuilds()
