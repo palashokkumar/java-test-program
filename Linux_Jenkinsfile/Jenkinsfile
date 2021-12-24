@@ -2,9 +2,9 @@ pipeline{
     agent{
         label 'docker_10'
     }
-    triggers{
-        pollSCM '* * * * *'
-    }
+//     triggers{
+//         pollSCM '* * * * *'
+//     }
     options{
         timestamps ()
         disableConcurrentBuilds()
