@@ -1,0 +1,51 @@
+pipeline{
+    agent{
+        label 'docker_10'
+    }
+    triggers{
+        pollSCM '* * * * *'
+    }
+    options{
+        timestamps ()
+        disableConcurrentBuilds()
+    }
+    stages{
+        stage('Checkout'){
+            steps{
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'ssh-key', url: 'git@github.com:vivektrivedi-123/java-test-program.git']]])
+            }
+        }
+        stage('Build'){
+            agent{
+                docker{image 'maven:3.6.0-jdk-11-slim'
+                       reuseNode true
+                       args '-v $WORKSPACE:/app -w /app'
+                }
+            }
+            steps{
+                sh label: '', script: '''
+                mvn clean install
+                '''
+            }
+        }
+        stage('Deploy'){
+            steps{
+                sh '''
+                cp -r web/target/time-tracker-web-0.5.0-SNAPSHOT /home/sysadmin/apache/apache-tomcat-8.5.73/webapps/
+                cd web/target
+                zip -r time-tracker-web-0.5.0-SNAPSHOT.zip time-tracker-web-0.5.0-SNAPSHOT
+                '''
+            }
+        }
+        stage('Artifacts'){
+            steps{
+                archiveArtifacts 'web/target/**.zip'
+            }
+        }
+    }
+    post{
+        always{
+            cleanWs ()
+        }
+    }
+}
