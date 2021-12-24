@@ -18,7 +18,7 @@ h1 {
 </head>
 <body>
 
-<h1>Heading 1 (From Linux)</h1>
+<h1>Heading 1 (Linux Part-2)</h1>
 
 <p>The heading above is aligned center.</p>
 
