@@ -22,7 +22,13 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                bat 'xcopy "C:\\Program Files\\Jenkins\\workspace\\mvn-pipeline\\web\\target\\time-tracker-web-0.5.0-SNAPSHOT" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps "/b/v/y'
+                bat 'xcopy "$WORKSPACE\\web\\target\\time-tracker-web-0.5.0-SNAPSHOT" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps "/b/v/y'
+                bat '7z a $WORKSPACE\\web\\target\\time-tracker-web-0.5.0-SNAPSHOT.zip time-tracker-web-0.5.0-SNAPSHOT'
+            }
+        }
+        stage('Artifacts'){
+            steps{
+                archiveArtifacts 'web\\target\\time-tracker-web-0.5.0-SNAPSHOT.zip'
             }
         }
     }
