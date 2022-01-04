@@ -18,7 +18,7 @@ h1 {
 </head>
 <body>
 
-<h1>Heading 1 (Linux Deployed)</h1>
+<h1>PollSCM</h1>
 
 <p>The heading above is aligned center.</p>
 
