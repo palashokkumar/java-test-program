@@ -18,7 +18,7 @@ h1 {
 </head>
 <body>
 
-<h1>PollSCM</h1>
+<h1>PollSCM Done</h1>
 
 <p>The heading above is aligned center.</p>
 
