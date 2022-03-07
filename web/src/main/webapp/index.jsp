@@ -11,14 +11,14 @@
 <head>
 <style>
 h1 {
-  text-align: right;
+  text-align: left;
 }
 
 </style>
 </head>
 <body>
 
-<h1>PollSCM with Tools in Jenkins Pipeline</h1>
+<h1>PollSCM with Tools in Jenkins Pipeline Left</h1>
 
 <p>The heading above is aligned center.</p>
 
